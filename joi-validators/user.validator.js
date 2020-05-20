@@ -1,9 +1,8 @@
 const Joi = require('@hapi/joi');
 const createUser = Joi.object().keys({
-    id: Joi.number(),
-    firstName: Joi.number().require(),
-    lastName: Joi.number().require(),
-    email: Joi.number().require()
+    firstName: Joi.number().required(),
+    lastName: Joi.number().required(),
+    email: Joi.number().required()
 });
 
 module.exports = {
